@@ -1,0 +1,28 @@
+From 98808b27f68980559643066724d700645d994150 Mon Sep 17 00:00:00 2001
+From: Evgeniy Polyakov <zbr@ioremap.net>
+Date: Wed, 11 Jan 2017 22:30:48 +0300
+Subject: [PATCH] python: added library versioning
+
+---
+ bindings/python/CMakeLists.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/bindings/python/CMakeLists.txt b/bindings/python/CMakeLists.txt
+index 308b255..1d719bc 100644
+--- a/bindings/python/CMakeLists.txt
++++ b/bindings/python/CMakeLists.txt
+@@ -1,8 +1,13 @@
+ add_library(eblob_python SHARED eblob_python.cpp)
+ target_link_libraries(eblob_python eblob eblob_cpp ${EBLOB_PYTHON_LIBRARIES})
+ 
++set_target_properties(eblob_python PROPERTIES
++    VERSION ${EBLOB_VERSION}
++    SOVERSION ${EBLOB_VERSION_ABI}
++)
++
+ install(TARGETS eblob_python
+     LIBRARY DESTINATION lib${LIB_SUFFIX}
+     ARCHIVE DESTINATION lib${LIB_SUFFIX}
+     BUNDLE DESTINATION library
+-    )
++)
