@@ -13,6 +13,8 @@ BuildRequires:	cmake >= 2.6
 BuildRequires:	python-devel
 BuildRequires:	handystats-devel >= 1.10.2
 
+ExclusiveArch:  x86_64
+
 
 %description
 libeblob is a low-level IO library which stores data in huge blob files
