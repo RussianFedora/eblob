@@ -21,7 +21,7 @@ appending records one after another.
 
     * fast append-only updates which do not require disk seeks
     * compact index to populate lookup information from disk
-    * multi-threaded index reading during starup
+    * multi-threaded index reading during startup
     * O(1) data location lookup time
     * ability to lock in-memory lookup index (hash table) to eliminate
 	memory swap
@@ -31,7 +31,7 @@ appending records one after another.
     * 2-stage write: prepare (which reserves the space) and commit
 	(which calculates checksum and update in-memory and on-disk indexes).
 	One can (re)write data using pwrite() in between without locks
-    * usuall 1-stage write interface
+    * usually 1-stage write interface
     * flexible configuration of hash table size, flags, alignment
     * defragmentation tool: entries to be deleted are only marked as removed,
 	eblob_check will iterate over specified blob files and actually
@@ -50,7 +50,7 @@ Summary:	Libraries for %{name}
 Eblob is a low-level IO library which stores data in huge blob files
 appending records one after another.
 
-This packae contains %{name} libraries
+This package contains %{name} libraries
 
 %package devel
 Summary:	Development package for %{name}
