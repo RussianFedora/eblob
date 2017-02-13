@@ -1,7 +1,7 @@
 Summary:	Append-only low-level IO library, which saves data in blob files
 Name:		eblob
 Version:	0.23.14
-Release:	1%{?dist}
+Release:	2%{?dist}
 
 License:	GPLv2+
 URL:		http://reverbrain.com/eblob
@@ -96,6 +96,9 @@ make %{?_smp_mflags}
 %{_libdir}/lib%{name}_python.so
 
 %changelog
+* Mon Feb 13 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 0.23.14-2
+- rebuilt against new boost
+
 * Thu Jan 26 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 0.23.14-1
 - update to 0.23.14
 
